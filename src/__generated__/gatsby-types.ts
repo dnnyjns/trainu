@@ -2071,8 +2071,13 @@ enum SitePageFieldsEnum {
   pluginCreator___resolve = 'pluginCreator.resolve',
   pluginCreator___name = 'pluginCreator.name',
   pluginCreator___version = 'pluginCreator.version',
+  pluginCreator___pluginOptions___alias____ = 'pluginCreator.pluginOptions.alias._',
+  pluginCreator___pluginOptions___extensions = 'pluginCreator.pluginOptions.extensions',
   pluginCreator___pluginOptions___emitSchema___src___generated___gatsby_introspection_json = 'pluginCreator.pluginOptions.emitSchema.src___generated___gatsby_introspection_json',
   pluginCreator___pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql = 'pluginCreator.pluginOptions.emitPluginDocuments.src___generated___gatsby_plugin_documents_graphql',
+  pluginCreator___pluginOptions___fonts = 'pluginCreator.pluginOptions.fonts',
+  pluginCreator___pluginOptions___fonts___family = 'pluginCreator.pluginOptions.fonts.family',
+  pluginCreator___pluginOptions___fonts___variants = 'pluginCreator.pluginOptions.fonts.variants',
   pluginCreator___pluginOptions___name = 'pluginCreator.pluginOptions.name',
   pluginCreator___pluginOptions___path = 'pluginCreator.pluginOptions.path',
   pluginCreator___pluginOptions___short_name = 'pluginCreator.pluginOptions.short_name',
@@ -2273,8 +2278,13 @@ enum SitePluginFieldsEnum {
   resolve = 'resolve',
   name = 'name',
   version = 'version',
+  pluginOptions___alias____ = 'pluginOptions.alias._',
+  pluginOptions___extensions = 'pluginOptions.extensions',
   pluginOptions___emitSchema___src___generated___gatsby_introspection_json = 'pluginOptions.emitSchema.src___generated___gatsby_introspection_json',
   pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql = 'pluginOptions.emitPluginDocuments.src___generated___gatsby_plugin_documents_graphql',
+  pluginOptions___fonts = 'pluginOptions.fonts',
+  pluginOptions___fonts___family = 'pluginOptions.fonts.family',
+  pluginOptions___fonts___variants = 'pluginOptions.fonts.variants',
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___path = 'pluginOptions.path',
   pluginOptions___short_name = 'pluginOptions.short_name',
@@ -2402,8 +2412,11 @@ type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 };
 
 type SitePluginPluginOptions = {
+  readonly alias: Maybe<SitePluginPluginOptionsAlias>;
+  readonly extensions: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly emitSchema: Maybe<SitePluginPluginOptionsEmitSchema>;
   readonly emitPluginDocuments: Maybe<SitePluginPluginOptionsEmitPluginDocuments>;
+  readonly fonts: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsFonts>>>;
   readonly name: Maybe<Scalars['String']>;
   readonly path: Maybe<Scalars['String']>;
   readonly short_name: Maybe<Scalars['String']>;
@@ -2418,6 +2431,14 @@ type SitePluginPluginOptions = {
   readonly theme_color_in_head: Maybe<Scalars['Boolean']>;
   readonly cacheDigest: Maybe<Scalars['String']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
+};
+
+type SitePluginPluginOptionsAlias = {
+  readonly _: Maybe<Scalars['String']>;
+};
+
+type SitePluginPluginOptionsAliasFilterInput = {
+  readonly _: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsEmitPluginDocuments = {
@@ -2437,8 +2458,11 @@ type SitePluginPluginOptionsEmitSchemaFilterInput = {
 };
 
 type SitePluginPluginOptionsFilterInput = {
+  readonly alias: Maybe<SitePluginPluginOptionsAliasFilterInput>;
+  readonly extensions: Maybe<StringQueryOperatorInput>;
   readonly emitSchema: Maybe<SitePluginPluginOptionsEmitSchemaFilterInput>;
   readonly emitPluginDocuments: Maybe<SitePluginPluginOptionsEmitPluginDocumentsFilterInput>;
+  readonly fonts: Maybe<SitePluginPluginOptionsFontsFilterListInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly path: Maybe<StringQueryOperatorInput>;
   readonly short_name: Maybe<StringQueryOperatorInput>;
@@ -2453,6 +2477,20 @@ type SitePluginPluginOptionsFilterInput = {
   readonly theme_color_in_head: Maybe<BooleanQueryOperatorInput>;
   readonly cacheDigest: Maybe<StringQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
+};
+
+type SitePluginPluginOptionsFonts = {
+  readonly family: Maybe<Scalars['String']>;
+  readonly variants: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+};
+
+type SitePluginPluginOptionsFontsFilterInput = {
+  readonly family: Maybe<StringQueryOperatorInput>;
+  readonly variants: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePluginPluginOptionsFontsFilterListInput = {
+  readonly elemMatch: Maybe<SitePluginPluginOptionsFontsFilterInput>;
 };
 
 type SitePluginSortInput = {
@@ -2500,22 +2538,5 @@ type usersdannyjonestrainumvpsrcpagesusingTypescriptTsx2907560070QueryVariables 
 
 
 type usersdannyjonestrainumvpsrcpagesusingTypescriptTsx2907560070Query = { readonly site: Maybe<Pick<Site, 'buildTime'>> };
-
-type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
-
-type usersdannyjonestrainumvpsrccomponentsImageTsx1132682437QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type usersdannyjonestrainumvpsrccomponentsImageTsx1132682437Query = { readonly placeholderImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> };
-
-type usersdannyjonestrainumvpsrccomponentsSeoTsx63159454QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type usersdannyjonestrainumvpsrccomponentsSeoTsx63159454Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
-
-type SiteTitleQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 }

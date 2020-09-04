@@ -1,10 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `TrainU`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "~": "src",
+        },
+        extensions: ["js"],
+      },
+    },
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-typegen`,
@@ -15,6 +24,26 @@ module.exports = {
         emitPluginDocuments: {
           "src/__generated__/gatsby-plugin-documents.graphql": true,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [
+              "300",
+              "300i",
+              "400",
+              "400i",
+              "500",
+              "500i",
+              "600",
+              "600i",
+            ],
+          },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
