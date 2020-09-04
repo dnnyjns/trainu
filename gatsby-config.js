@@ -15,6 +15,7 @@ module.exports = {
         extensions: ["js"],
       },
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-typegen`,
