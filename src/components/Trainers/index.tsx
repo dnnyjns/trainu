@@ -13,10 +13,6 @@ const Root = styled.div`
   `}
 `
 
-const TrainerHeader = styled.div`
-  margin-bottom: ${props => props.theme.spacing5};
-`
-
 const TrainerTitle = styled.h2`
   color: ${props => props.theme.font.clrDarkPrimary};
   font-size: ${props => props.theme.font.size36};
@@ -49,13 +45,12 @@ const Photos = styled.ul`
 const Trainers: React.FC = () => {
   return (
     <Root>
-      <TrainerHeader>
-        <TrainerTitle>Our Team</TrainerTitle>
+      <div>
+        <TrainerTitle>Trainers</TrainerTitle>
         <TrainerSubtitle>
-          Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor
-          ultricies donec risus sodales. Tempus quis et.
+          Get started today by working out with one our qualified trainers!
         </TrainerSubtitle>
-      </TrainerHeader>
+      </div>
       <Photos>
         <TrainerPhoto
           name="Lindsay Walton"
