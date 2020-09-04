@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/about.tsx"],"names":["About"],"mappings":"6FAAA,gCAMeA,UAJD,WACZ,OAAO","file":"component---src-pages-about-tsx-052817420e8bbe00f2b5.js","sourcesContent":["import React from \"react\"\n\nconst About = () => {\n  return <div>About Text</div>\n}\n\nexport default About\n"],"sourceRoot":""}

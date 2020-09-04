@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/contact.tsx"],"names":["Contact"],"mappings":"6FAAA,gCAMeA,UAJC,WACd,OAAO","file":"component---src-pages-contact-tsx-8cc90399480f01bb054f.js","sourcesContent":["import React from \"react\"\n\nconst Contact = () => {\n  return <div>Contact Text</div>\n}\n\nexport default Contact\n"],"sourceRoot":""}
