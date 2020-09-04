@@ -6,7 +6,7 @@ import SEO from "../components/SEO"
 import Trainers from "../components/Trainers"
 import media, { breakpoints } from "~/style/media"
 
-const Hero = styled(BackgroundImage)`
+const BG = styled(BackgroundImage)`
   background-position: top center;
   background-repeat: repeat-y;
   background-size: cover;
@@ -55,7 +55,7 @@ const TrainerWrapper = styled.div`
 const IndexPage = () => {
   const data = useStaticQuery<GatsbyTypes.HomePageHeroQuery>(graphql`
     query HomePageHero {
-      placeholderImage: file(relativePath: { eq: "workout.webp" }) {
+      placeholderImage: file(relativePath: { eq: "workout.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -68,7 +68,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Home" />
-      <Hero fluid={data.placeholderImage?.childImageSharp?.fluid}>
+      <BG fluid={data.placeholderImage?.childImageSharp?.fluid}>
         <Body>
           We've made it easier than ever to schedule training sessions with your
           favorite trainer! Get started by selecting a trainer from below!
@@ -76,7 +76,7 @@ const IndexPage = () => {
         <TrainerWrapper>
           <Trainers />
         </TrainerWrapper>
-      </Hero>
+      </BG>
     </>
   )
 }
