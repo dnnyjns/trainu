@@ -1,10 +1,12 @@
 import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import GatsbyImage from "gatsby-image"
 import { transparentize } from "polished"
 import styled from "styled-components"
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons/faCalendarAlt"
 import { openPopupWidget } from "react-calendly"
 import Icon from "~/components/Icon"
-import colors from "~/style/colors"
+import { Trainer } from "~/data/trainers"
 
 const ImageWrapper = styled.div`
   cursor: pointer;
@@ -26,11 +28,12 @@ const Overlay = styled.div`
   justify-content: center;
 `
 
-const Image = styled.img`
+const Img = styled(GatsbyImage)`
+  background-color: ${props => props.theme.colors.black};
   border-radius: ${props => props.theme.border.radiusLg};
   box-shadow: ${props => props.theme.border.boxShadowLg};
-  object-fit: cover;
-  position: absolute;
+  /* object-fit: cover; */
+  position: absolute !important;
   height: 100%;
   width: 100%;
 `
@@ -43,22 +46,42 @@ const Info = styled.div`
   margin-top: ${props => props.theme.spacing2};
 `
 
-const Title = styled.p`
+const Description = styled.p`
   color: ${props => props.theme.colors.primary400};
 `
 
-interface TrainerPhotoProps {
-  name: string
-  title: string
-  url: string
-}
-const TrainerPhoto: React.FC<TrainerPhotoProps> = ({ name, title, url }) => {
+const TrainerComponent: React.FC<Trainer> = ({
+  calendly,
+  description,
+  name,
+  image,
+}) => {
+  const data = useStaticQuery<GatsbyTypes.TrainerPhotosQuery>(graphql`
+    query TrainerPhotos {
+      photos: allFile(filter: { absolutePath: { regex: "/trainer-/" } }) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                originalName
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  console.log(data)
+
   const [hover, setHover] = useState(false)
   const onClick = () =>
     openPopupWidget({
-      url: "https://calendly.com/trainer-u",
+      url: calendly,
     })
-
+  const photo = data.photos.edges.find(p =>
+    p.node.childImageSharp?.fluid?.originalName?.includes(image)
+  )?.node.childImageSharp?.fluid
   return (
     <li>
       <ImageWrapper
@@ -66,7 +89,7 @@ const TrainerPhoto: React.FC<TrainerPhotoProps> = ({ name, title, url }) => {
         onMouseLeave={() => setHover(false)}
         onClick={onClick}
       >
-        <Image src={url} />
+        <Img fluid={photo} imgStyle={{ objectFit: "contain" }} />
         {hover && (
           <Overlay>
             <Icon icon={faCalendarAlt} size="5x" />
@@ -75,10 +98,10 @@ const TrainerPhoto: React.FC<TrainerPhotoProps> = ({ name, title, url }) => {
       </ImageWrapper>
       <Info>
         <h4>{name}</h4>
-        <Title>{title}</Title>
+        <Description>{description}</Description>
       </Info>
     </li>
   )
 }
 
-export default TrainerPhoto
+export default TrainerComponent

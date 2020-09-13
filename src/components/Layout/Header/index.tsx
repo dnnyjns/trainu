@@ -45,12 +45,12 @@ const Title = styled.span`
   margin-left: ${props => props.theme.spacing4};
 `
 
-const NavLink = styled(Link)`
-  color: ${props => props.theme.colors.neutral400};
-  font-size: ${props => props.theme.font.size20};
-  font-weight: ${props => props.theme.font.weightMedium};
-  padding-left: ${props => props.theme.spacing6};
-`
+// const NavLink = styled(Link)`
+//   color: ${props => props.theme.colors.neutral400};
+//   font-size: ${props => props.theme.font.size20};
+//   font-weight: ${props => props.theme.font.weightMedium};
+//   padding-left: ${props => props.theme.spacing6};
+// `
 
 interface HeaderProps {
   siteTitle?: string
@@ -65,8 +65,8 @@ const Header: React.FC<HeaderProps> = ({ siteTitle = "" }) => (
           </span>
           <Title>{siteTitle}</Title>
         </LogoLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        {/* <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink> */}
       </NavContent>
     </Nav>
   </Root>

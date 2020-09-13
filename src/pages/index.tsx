@@ -71,7 +71,7 @@ const IndexPage = () => {
       <BG fluid={data.placeholderImage?.childImageSharp?.fluid}>
         <Body>
           We've made it easier than ever to schedule training sessions with your
-          favorite trainer! Get started by selecting a trainer from below!
+          favorite trainer. Get started by selecting a trainer from below!
         </Body>
         <TrainerWrapper>
           <Trainers />

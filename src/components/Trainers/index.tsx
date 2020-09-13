@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import media from "~/style/media"
-import TrainerPhoto from "./TrainerPhoto"
+import Trainer from "./Trainer"
+import trainers from "~/data/trainers"
 
 const Root = styled.div`
   background-color: ${props => props.theme.colors.neutral050};
@@ -47,41 +48,12 @@ const Trainers: React.FC = () => {
     <Root>
       <div>
         <TrainerTitle>Trainers</TrainerTitle>
-        <TrainerSubtitle>
-          Get started today by working out with one our qualified trainers!
-        </TrainerSubtitle>
+        <TrainerSubtitle>Kansas City, MO</TrainerSubtitle>
       </div>
       <Photos>
-        <TrainerPhoto
-          name="Lindsay Walton"
-          title="Cardio"
-          url="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-        />
-        <TrainerPhoto
-          name="Courtney Henry"
-          title="Swimming"
-          url="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-        />
-        <TrainerPhoto
-          name="Tom Cook"
-          title="Weight Training"
-          url="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-        />
-        <TrainerPhoto
-          name="Whitney Francis"
-          title="General Fitness"
-          url="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-        />
-        <TrainerPhoto
-          name="Leonard Krasner"
-          title="Yoga"
-          url="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-        />
-        <TrainerPhoto
-          name="Floyd Miles"
-          title="Weight Training"
-          url="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-        />
+        {trainers.map(trainer => (
+          <Trainer key={trainer.name} {...trainer} />
+        ))}
       </Photos>
     </Root>
   )
