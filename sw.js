@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "cb1608f2-ea90d77e82ca3025a756.js"
   },
   {
-    "url": "app-bd6d261721d532a0ff73.js"
+    "url": "app-1f357f7cc257c15f5774.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c9bf79fceb256452c31ca009f8c6b323"
+    "revision": "eb537c181c53d3357d230398e5edc393"
   },
   {
     "url": "google-fonts/s/poppins/v12/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2",
@@ -87,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "bc14aa9984a8f6560d1db61b1a655857"
+    "revision": "d3824e0bfe71e83c4e7d9f9280c73134"
   },
   {
     "url": "polyfill-0538dbf6ed89868033ac.js"
@@ -186,7 +186,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/trainu/app-bd6d261721d532a0ff73.js`))) {
+  if (!resources || !(await caches.match(`/trainu/app-1f357f7cc257c15f5774.js`))) {
     return await fetch(event.request)
   }
 
