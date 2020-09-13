@@ -11,6 +11,7 @@ import styled from "styled-components"
 import Header from "./Header"
 
 const Root = styled.div`
+  height: 100%;
   overflow: hidden;
 `
 
