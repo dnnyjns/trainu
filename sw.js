@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c080853bddf791630eed.js"
+    "url": "webpack-runtime-4f1f48ef1143379eb1c5.js"
   },
   {
     "url": "framework-376edee25eb5f5cd8260.js"
@@ -40,38 +40,38 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "cc134421ed62e933c5ff6df97e2a71fa"
+    "revision": "343d35ba6c42fc4c349723b14e0302fe"
   },
   {
-    "url": "google-fonts/s/poppins/v12/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2",
+    "url": "google-fonts/s/poppins/v13/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2",
     "revision": "9ddc04912d6e8f88d9de4045b8b89c59"
   },
   {
-    "url": "google-fonts/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2",
+    "url": "google-fonts/s/poppins/v13/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2",
     "revision": "087457026965f98466618a478c4b1b07"
   },
   {
-    "url": "google-fonts/s/poppins/v12/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2",
+    "url": "google-fonts/s/poppins/v13/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2",
     "revision": "84780596e268aa0cb2be48af2ed5c375"
   },
   {
-    "url": "google-fonts/s/poppins/v12/pxiDyp8kv8JHgFVrJJLm21lVF9eO.woff2",
+    "url": "google-fonts/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm21lVF9eO.woff2",
     "revision": "020e7a3762470c85aef405ce3351b026"
   },
   {
-    "url": "google-fonts/s/poppins/v12/pxiDyp8kv8JHgFVrJJLmg1hVF9eO.woff2",
+    "url": "google-fonts/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmg1hVF9eO.woff2",
     "revision": "97ac1837f7e7dbb299cf005f13987ef9"
   },
   {
-    "url": "google-fonts/s/poppins/v12/pxiDyp8kv8JHgFVrJJLmr19VF9eO.woff2",
+    "url": "google-fonts/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmr19VF9eO.woff2",
     "revision": "83678295859259ae5dee89f6f1a97ed1"
   },
   {
-    "url": "google-fonts/s/poppins/v12/pxiEyp8kv8JHgFVrJJfecg.woff2",
+    "url": "google-fonts/s/poppins/v13/pxiEyp8kv8JHgFVrJJfecg.woff2",
     "revision": "9ed361bba8488aeb2797b82befda20f1"
   },
   {
-    "url": "google-fonts/s/poppins/v12/pxiGyp8kv8JHgFVrJJLucHtA.woff2",
+    "url": "google-fonts/s/poppins/v13/pxiGyp8kv8JHgFVrJJLucHtA.woff2",
     "revision": "c8844b2518e608504a044c16951c094e"
   },
   {
@@ -87,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a524d9ec112170daac9cec31b5a064f7"
+    "revision": "81e8860a58a693e13bb7262cb1bf8857"
   },
   {
     "url": "polyfill-0538dbf6ed89868033ac.js"
