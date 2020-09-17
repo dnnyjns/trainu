@@ -7,7 +7,7 @@ export interface Trainer {
 
 const trainers: Trainer[] = [
   {
-    calendly: "https://calendly.com/trainer-u",
+    calendly: "https://calendly.com/trainu",
     name: "Kyron",
     description: "General Fitness",
     image: "kyron",
