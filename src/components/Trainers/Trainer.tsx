@@ -32,7 +32,6 @@ const Img = styled(GatsbyImage)`
   background-color: ${props => props.theme.colors.black};
   border-radius: ${props => props.theme.border.radiusLg};
   box-shadow: ${props => props.theme.border.boxShadowLg};
-  /* object-fit: cover; */
   position: absolute !important;
   height: 100%;
   width: 100%;
@@ -89,7 +88,7 @@ const TrainerComponent: React.FC<Trainer> = ({
         onMouseLeave={() => setHover(false)}
         onClick={onClick}
       >
-        <Img fluid={photo} imgStyle={{ objectFit: "contain" }} />
+        <Img fluid={photo} />
         {hover && (
           <Overlay>
             <Icon icon={faCalendarAlt} size="5x" />
