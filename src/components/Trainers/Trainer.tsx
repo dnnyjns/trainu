@@ -71,7 +71,6 @@ const TrainerComponent: React.FC<Trainer> = ({
       }
     }
   `)
-  console.log(data)
 
   const [hover, setHover] = useState(false)
   const onClick = () =>
