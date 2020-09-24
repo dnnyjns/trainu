@@ -10,7 +10,7 @@ const trainers: Trainer[] = [
     calendly: "https://calendly.com/trainu",
     name: "Kyron",
     description: "General Fitness",
-    image: "kyron",
+    image: "kyron2",
   },
 ]
 
