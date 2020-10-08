@@ -11,6 +11,7 @@ const BG = styled(BackgroundImage)`
   background-repeat: repeat-y;
   background-size: cover;
   display: inline-block;
+  overflow: scroll;
   padding-bottom: ${props => props.theme.spacing32};
   height: 100%;
   width: 100%;
